@@ -1,0 +1,9 @@
+from djongo import models
+
+class Activity(models.Model):
+    user = models.CharField(max_length=100)
+    type = models.CharField(max_length=50)
+    duration = models.IntegerField()
+    date = models.DateField()
+    class Meta:
+        db_table = 'activities'
